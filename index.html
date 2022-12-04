@@ -1,395 +1,400 @@
 <!DOCTYPE html>
 <html lang="ja">
 
-    <script type="text/javascript">
-        sum = 0
-        function keisan(){
-            // 面子1
-            var temp1 = document.form1.goods1.selectedIndex; // 単価を設定
-            if(temp1==0) price1=0
-            if(temp1==1) price1=0
-            if(temp1==2) price1=2
-            if(temp1==3) price1=4
-            if(temp1==4) price1=8
-            if(temp1==5) price1=16
-            if(temp1==6) price1=4
-            if(temp1==7) price1=8
-            if(temp1==8) price1=16
-            if(temp1==9) price1=32
-            document.form1.field1.value = price1; // 小計を表示
-        
-            // 面子2
-            var temp2 = document.form1.goods2.selectedIndex; // 単価を設定
-            if(temp2==0) price2=0
-            if(temp2==1) price2=0
-            if(temp2==2) price2=2
-            if(temp2==3) price2=4
-            if(temp2==4) price2=8
-            if(temp2==5) price2=16
-            if(temp2==6) price2=4
-            if(temp2==7) price2=8
-            if(temp2==8) price2=16
-            if(temp2==9) price2=32
-            document.form1.field2.value = price2; // 小計を表示
-        
-            // 面子3
-            var temp3 = document.form1.goods3.selectedIndex; // 単価を設定
-            if(temp3==0) price3=0
-            if(temp3==1) price3=0
-            if(temp3==2) price3=2
-            if(temp3==3) price3=4
-            if(temp3==4) price3=8
-            if(temp3==5) price3=16
-            if(temp3==6) price3=4
-            if(temp3==7) price3=8
-            if(temp3==8) price3=16
-            if(temp3==9) price3=32
-            document.form1.field3.value = price3; // 小計を表示
+<script type="text/javascript">
+    var sum = 0;
+    function keisan() {
+        // 面子1
+        var temp1 = document.form1.goods1.selectedIndex; // 単価を設定
+        if (temp1 == 0) price1 = 0;
+        if (temp1 == 1) price1 = 0;
+        if (temp1 == 2) price1 = 2;
+        if (temp1 == 3) price1 = 4;
+        if (temp1 == 4) price1 = 8;
+        if (temp1 == 5) price1 = 16;
+        if (temp1 == 6) price1 = 4;
+        if (temp1 == 7) price1 = 8;
+        if (temp1 == 8) price1 = 16;
+        if (temp1 == 9) price1 = 32;
+        document.form1.field1.value = price1; // 小計を表示
 
-            // 面子4
-            var temp4 = document.form1.goods4.selectedIndex; // 単価を設定
-            if(temp4==0) price4=0
-            if(temp4==1) price4=0
-            if(temp4==2) price4=2
-            if(temp4==3) price4=4
-            if(temp4==4) price4=8
-            if(temp4==5) price4=16
-            if(temp4==6) price4=4
-            if(temp4==7) price4=8
-            if(temp4==8) price4=16
-            if(temp4==9) price4=32
-            document.form1.field4.value = price4; // 小計を表示
-        
-            // 合計を計算
-            var total = price1 + price2 + price3 + price4;
-            document.form1.field_total.value = total; // 合計を表示
+        // 面子2
+        var temp2 = document.form1.goods2.selectedIndex; // 単価を設定
+        if (temp2 == 0) price2 = 0;
+        if (temp2 == 1) price2 = 0;
+        if (temp2 == 2) price2 = 2;
+        if (temp2 == 3) price2 = 4;
+        if (temp2 == 4) price2 = 8;
+        if (temp2 == 5) price2 = 16;
+        if (temp2 == 6) price2 = 4;
+        if (temp2 == 7) price2 = 8;
+        if (temp2 == 8) price2 = 16;
+        if (temp2 == 9) price2 = 32;
+        document.form1.field2.value = price2; // 小計を表示
 
-            sum += total;
+        // 面子3
+        var temp3 = document.form1.goods3.selectedIndex; // 単価を設定
+        if (temp3 == 0) price3 = 0;
+        if (temp3 == 1) price3 = 0;
+        if (temp3 == 2) price3 = 2;
+        if (temp3 == 3) price3 = 4;
+        if (temp3 == 4) price3 = 8;
+        if (temp3 == 5) price3 = 16;
+        if (temp3 == 6) price3 = 4;
+        if (temp3 == 7) price3 = 8;
+        if (temp3 == 8) price3 = 16;
+        if (temp3 == 9) price3 = 32;
+        document.form1.field3.value = price3; // 小計を表示
 
-            //基本符
-            if(temp1%2==1 && temp2%2==1 && temp3%2==1 && temp4%2==1 ){
-                document.form1.basic.value = 30; //門前のときは基本符30
-                sum += 30;
-            } else {
-                document.form1.basic.value = 20; //鳴くときは基本符20
-                sum += 20;
-            }
-            return sum;
+        // 面子4
+        var temp4 = document.form1.goods4.selectedIndex; // 単価を設定
+        if (temp4 == 0) price4 = 0;
+        if (temp4 == 1) price4 = 0;
+        if (temp4 == 2) price4 = 2;
+        if (temp4 == 3) price4 = 4;
+        if (temp4 == 4) price4 = 8;
+        if (temp4 == 5) price4 = 16;
+        if (temp4 == 6) price4 = 4;
+        if (temp4 == 7) price4 = 8;
+        if (temp4 == 8) price4 = 16;
+        if (temp4 == 9) price4 = 32;
+        document.form1.field4.value = price4; // 小計を表示
+
+        // 合計を計算
+        var total = price1 + price2 + price3 + price4;
+        document.form1.field_total.value = total; // 合計を表示
+
+        sum += total;
+
+        //基本符
+        if (temp1 % 2 == 1 && temp2 % 2 == 1 && temp3 % 2 == 1 && temp4 % 2 == 1) {
+            document.form1.basic.value = 30; //門前のときは基本符30
+            sum += 30;
+        } else {
+            document.form1.basic.value = 20; //鳴くときは基本符20
+            sum += 20;
         }
-        
-        function keisan2(){//雀頭
-            var temp5 = document.form2.head.selectedIndex; // 単価を設定
-            if(temp5==0) head_v=0
-            if(temp5==1) head_v=0
-            if(temp5==2) head_v=2
-            if(temp5==3) head_v=2
-            if(temp5==4) head_v=2
-            document.form2.field5.value = head_v; // 小計を表示
-            return head_v;
+        return sum;
+    }
+
+    function keisan2() {//雀頭
+        var temp5 = document.form2.head.selectedIndex; // 単価を設定
+        if (temp5 == 0) head_v = 0;
+        if (temp5 == 1) head_v = 0;
+        if (temp5 == 2) head_v = 2;
+        if (temp5 == 3) head_v = 2;
+        if (temp5 == 4) head_v = 2;
+        document.form2.field5.value = head_v; // 小計を表示
+        return head_v;
+    }
+
+    function keisan3() {//待ち
+        var temp6 = document.form3.machi.selectedIndex; // 単価を設定
+        if (temp6 == 0) machi_v = 0;
+        if (temp6 == 1) machi_v = 0;
+        if (temp6 == 2) machi_v = 2;
+        if (temp6 == 3) machi_v = 2;
+        if (temp6 == 4) machi_v = 2;
+        document.form3.field6.value = machi_v; // 小計を表示
+        return machi_v;
+    }
+
+    //var sum;
+    function keisan4() {//和了
+        var temp7 = document.form4.agari.selectedIndex; // 単価を設定
+        if (temp7 == 0) agari_v = 0;
+        if (temp7 == 1) agari_v = 2;
+        document.form4.field7.value = agari_v; // 小計を表示
+        return agari_v;
+    }
+
+    function fu_sum() {//最終的な符
+        var temp8 = document.form5.fu.selectedIndex;
+        sum = 0;
+        if (temp8 == 1) sum = (keisan() + keisan2() + keisan3() + keisan4());
+        if (temp8 == 2) sum = 20;
+        if (temp8 == 3) sum = 25;
+        if (temp8 == 4) sum = 0;
+
+        //基礎点の切り上げ
+        if (sum == 20) sum = 20;
+        if (sum == 22 || sum == 24 || sum == 26 || sum == 28 || sum == 30) sum = 30;
+        if (sum == 32 || sum == 34 || sum == 36 || sum == 38 || sum == 40) sum = 40;
+        if (sum == 42 || sum == 44 || sum == 46 || sum == 48 || sum == 50) sum = 50;
+        if (sum == 52 || sum == 54 || sum == 56 || sum == 58 || sum == 60) sum = 60;
+        if (sum == 62 || sum == 64 || sum == 66 || sum == 68 || sum == 70) sum = 70;
+
+        document.form5.field8.value = sum;
+        return sum;
+    }
+
+    //var fu2 = fu_sum();
+    function point() {//最終的な点数
+        document.form5.field8.value = 0;
+        var fu = fu_sum();
+        var temp9 = document.form6.tensu.selectedIndex;//飜数
+
+        //20符(ピンフ・メンゼンツモの2翻のみ)
+        if (fu == 20) {
+            if (temp9 == 2) final_point = 1300;
+            if (temp9 == 3) final_point = 2600;
+            if (temp9 == 4) final_point = 5200;
+            if (temp9 == 5) final_point = 8000;
+            if (temp9 == 1) final_point = 'error';
+        }
+        //30符
+        if (fu == 30) {
+            if (temp9 == 1) final_point = 1000;
+            if (temp9 == 2) final_point = 2000;
+            if (temp9 == 3) final_point = 3900;
+            if (temp9 == 4) final_point = 7700;
+            if (temp9 == 5) final_point = 8000;
+        }
+        //40符
+        if (fu == 40) {
+            if (temp9 == 1) final_point = 1300;
+            if (temp9 == 2) final_point = 2600;
+            if (temp9 == 3) final_point = 5200;
+            if (temp9 == 4 || temp9 == 5) final_point = 8000;
+        }
+        //50符
+        if (fu == 50) {
+            if (temp9 == 1) final_point = 1600;
+            if (temp9 == 2) final_point = 3200;
+            if (temp9 == 3) final_point = 6400;
+            if (temp9 == 4 || temp9 == 5) final_point = 8000;
+        }
+        //60符
+        if (fu == 60) {
+            if (temp9 == 1) final_point = 2000;
+            if (temp9 == 2) final_point = 3900;
+            if (temp9 == 3) final_point = 7700;
+            if (temp9 == 4 || temp9 == 5) final_point = 8000;
+        }
+        //70符
+        if (fu == 70) {
+            if (temp9 == 1) final_point = 2300;
+            if (temp9 == 2) final_point = 4500;
+            if (temp9 == 3 || temp9 == 4 || temp9 == 5) final_point = 8000;
+        }
+        //80符
+        if (fu == 80) {
+            if (temp9 == 1) final_point = 2600;
+            if (temp9 == 2) final_point = 5200;
+            if (temp9 == 3 || temp9 == 4 || temp9 == 5) final_point = 8000;
+        }
+        //90符
+        if (fu == 90) {
+            if (temp9 == 1) final_point = 2900;
+            if (temp9 == 2) final_point = 5800;
+            if (temp9 == 3 || temp9 == 4 || temp9 == 5) final_point = 8000;
+        }
+        //100符
+        if (fu == 100) {
+            if (temp9 == 1) final_point = 3200;
+            if (temp9 == 2) final_point = 6400;
+            if (temp9 == 3 || temp9 == 4 || temp9 == 5) final_point = 8000;
         }
 
-        function keisan3(){//待ち
-            var temp6 = document.form3.machi.selectedIndex; // 単価を設定
-            if(temp6==0) machi_v=0
-            if(temp6==1) machi_v=0
-            if(temp6==2) machi_v=2
-            if(temp6==3) machi_v=2
-            if(temp6==4) machi_v=2
-            document.form3.field6.value = machi_v; // 小計を表示
-            return machi_v;
-        }
+        //七対子(25符)
+        if (temp9 == 2 && fu == 25) final_point = 1600;
+        if (temp9 == 3 && fu == 25) final_point = 3200;
+        if (temp9 == 4 && fu == 25) final_point = 6400;
+        if (temp9 == 5 && fu == 25) final_point = 8000;
 
-        //var sum;
-        function keisan4(){//和了
-            var temp7 = document.form4.agari.selectedIndex; // 単価を設定
-            if(temp7==0) agari_v=0
-            if(temp7==1) agari_v=2
-            document.form4.field7.value = agari_v; // 小計を表示
-            return agari_v;
-        }
+        //跳満以上
+        if (temp9 == 6 || temp9 == 7) final_point = 12000;
+        if (temp9 == 8 || temp9 == 9 || temp9 == 10) final_point = 16000;
+        if (temp9 == 11 || temp9 == 12) final_point = 24000;
+        if (temp9 >= 13) final_point = 32000;
 
-        function fu_sum(){//最終的な符
-            var temp8 = document.form5.fu.selectedIndex;
-            sum = 0;
-            if(temp8==1) sum = (keisan() + keisan2() + keisan3() + keisan4());
-            if(temp8==2) sum = 25
-            if(temp8==3) sum = 0
+        //リセット
+        if (temp9 == 14) final_point = 0;
+        document.form6.field9.value = final_point;
+    }
 
-            //基礎点の切り上げ
-            if(sum==20) sum = 20
-            if(sum==22 || sum==24 || sum==26 || sum==28 || sum==30) sum = 30
-            if(sum==32 || sum==34 || sum==36 || sum==38 || sum==40) sum = 40
-            if(sum==42 || sum==44 || sum==46 || sum==48 || sum==50) sum = 50
-            if(sum==52 || sum==54 || sum==56 || sum==58 || sum==60) sum = 60
-            if(sum==62 || sum==64 || sum==66 || sum==68 || sum==70) sum = 70
-
-            document.form5.field8.value = sum;
-            return sum;
-        }
-
-        //var fu2 = fu_sum();
-        function point(){//最終的な点数
-            document.form5.field8.value = 0;
-            var fu = fu_sum();
-            var temp9 = document.form6.tensu.selectedIndex;//飜数
-
-            //20符(ピンフ・メンゼンツモの2翻のみ)
-            if(fu==20){
-                if(temp9!=2) final_point = 'error';
-                if(temp9==2) final_point = 1300;
-            }
-            //30符
-            if(fu==30){
-                if(temp9==1) final_point = 1000;
-                if(temp9==2) final_point = 2000;
-                if(temp9==3) final_point = 3900;
-                if(temp9==4) final_point = 7700;
-                if(temp9==5) final_point = 8000;
-            }
-            //40符
-            if(fu==40){
-                if(temp9==1) final_point = 1300;
-                if(temp9==2) final_point = 2600;
-                if(temp9==3) final_point = 5200;
-                if(temp9==4||temp9==5) final_point = 8000;
-            }
-            //50符
-            if(fu==50){
-                if(temp9==1) final_point = 1600;
-                if(temp9==2) final_point = 3200;
-                if(temp9==3) final_point = 6400;
-                if(temp9==4||temp9==5) final_point = 8000;
-            }
-            //60符
-            if(fu==60){
-                if(temp9==1) final_point = 2000;
-                if(temp9==2) final_point = 3900;
-                if(temp9==3) final_point = 7700;
-                if(temp9==4||temp9==5) final_point = 8000;
-            }
-            //70符
-            if(fu==70){
-                if(temp9==1) final_point = 2300;
-                if(temp9==2) final_point = 4500;
-                if(temp9==3||temp9==4||temp9==5) final_point = 8000;
-            }
-            //80符
-            if(fu==80){
-                if(temp9==1) final_point = 2600;
-                if(temp9==2) final_point = 5200;
-                if(temp9==3||temp9==4||temp9==5) final_point = 8000;
-            }
-            //90符
-            if(fu==90){
-                if(temp9==1) final_point = 2900;
-                if(temp9==2) final_point = 5800;
-                if(temp9==3||temp9==4||temp9==5) final_point = 8000;
-            }
-            //100符
-            if(fu==100){
-                if(temp9==1) final_point = 3200;
-                if(temp9==2) final_point = 6400;
-                if(temp9==3||temp9==4||temp9==5) final_point = 8000;
-            }
-
-            //七対子(25符)
-            if(temp9==2 && fu==25) final_point = 1600
-            if(temp9==3 && fu==25) final_point = 3200
-            if(temp9==4 && fu==25) final_point = 6400
-            if(temp9==5 && fu==25) final_point = 8000
-
-            //跳満以上
-            if(temp9==6||temp9==7) final_point = 12000
-            if(temp9==8||temp9==9||temp9==10) final_point = 16000
-            if(temp9==11||temp9==12) final_point = 24000
-            if(temp9>=13) final_point = 32000
-
-            //リセット
-            if(temp9==14) final_point = 0
-            document.form6.field9.value = final_point;
-        }
-       
-    </script> 
+</script>
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>点数計算</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>点数計算</title>
 
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-  <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-  
-  
+
+
     <form action="#" name="form1">
         <table>
-        <p>4面子の構成</p>
-        <tr>
-        <th>面子</th>
-        <!-- <th>単価</th> -->
-        <th>種類</th>
-        <th>符</th>
-        </tr>
-        <tr>
-        <td>面子1</td>
-        <!-- <td align="right">500円</td> -->
-        <td><select name="goods1" onChange="keisan()">
-        <option>明順子</option>
-        <option>暗順子</option>
-        <option>中張牌(明刻子)</option>
-        <option>中張牌(暗刻子)</option>
-        <option>中張牌(明槓子)</option>
-        <option>中張牌(暗槓子)</option>
-        <option>幺九牌(明刻子)</option>
-        <option>幺九牌(暗刻子)</option>
-        <option>幺九牌(明槓子)</option>
-        <option>幺九牌(暗槓子)</option>
-        </select></td>
-        <td><input type="text" name="field1" size="8" value="0"> 符</td>
-        </tr>
+            <!--<p>4面子の構成</p>-->
+            <tr>
+                <th>4面子</th>
+                <!-- <th>単価</th> -->
+                <th>種類</th>
+                <th>符</th>
+            </tr>
+            <tr>
+                <td>面子1</td>
+                <!-- <td align="right">500円</td> -->
+                <td><select name="goods1" onChange="keisan()">
+                        <option>明順子</option>
+                        <option>暗順子</option>
+                        <option>中張牌(明刻子)</option>
+                        <option>中張牌(暗刻子)</option>
+                        <option>中張牌(明槓子)</option>
+                        <option>中張牌(暗槓子)</option>
+                        <option>幺九牌(明刻子)</option>
+                        <option>幺九牌(暗刻子)</option>
+                        <option>幺九牌(明槓子)</option>
+                        <option>幺九牌(暗槓子)</option>
+                    </select></td>
+                <td><input type="text" name="field1" size="8" value="0"> 符</td>
+            </tr>
 
-        <tr>    
-        <td>面子2</td>
-        <!-- <td align="right">1,000円</td> -->
-        <td><select name="goods2" onChange="keisan()">
-        <option>明順子</option>
-        <option>暗順子</option>
-        <option>中張牌(明刻子)</option>
-        <option>中張牌(暗刻子)</option>
-        <option>中張牌(明槓子)</option>
-        <option>中張牌(暗槓子)</option>
-        <option>幺九牌(明刻子)</option>
-        <option>幺九牌(暗刻子)</option>
-        <option>幺九牌(明槓子)</option>
-        <option>幺九牌(暗槓子)</option>
-        </select></td>
-        <td><input type="text" name="field2" size="8" value="0"> 符</td>
-        </tr>
+            <tr>
+                <td>面子2</td>
+                <!-- <td align="right">1,000円</td> -->
+                <td><select name="goods2" onChange="keisan()">
+                        <option>明順子</option>
+                        <option>暗順子</option>
+                        <option>中張牌(明刻子)</option>
+                        <option>中張牌(暗刻子)</option>
+                        <option>中張牌(明槓子)</option>
+                        <option>中張牌(暗槓子)</option>
+                        <option>幺九牌(明刻子)</option>
+                        <option>幺九牌(暗刻子)</option>
+                        <option>幺九牌(明槓子)</option>
+                        <option>幺九牌(暗槓子)</option>
+                    </select></td>
+                <td><input type="text" name="field2" size="8" value="0"> 符</td>
+            </tr>
 
-        <tr>
-        <td>面子3</td>
-        <!-- <td align="right">3,000円</td>  -->
-        <td><select name="goods3" onChange="keisan()">
-        <option>明順子</option>
-        <option>暗順子</option>
-        <option>中張牌(明刻子)</option>
-        <option>中張牌(暗刻子)</option>
-        <option>中張牌(明槓子)</option>
-        <option>中張牌(暗槓子)</option>
-        <option>幺九牌(明刻子)</option>
-        <option>幺九牌(暗刻子)</option>
-        <option>幺九牌(明槓子)</option>
-        <option>幺九牌(暗槓子)</option>
-        </select></td>
-        <td><input type="text" name="field3" size="8" value="0"> 符</td>
-        </tr>
+            <tr>
+                <td>面子3</td>
+                <!-- <td align="right">3,000円</td>  -->
+                <td><select name="goods3" onChange="keisan()">
+                        <option>明順子</option>
+                        <option>暗順子</option>
+                        <option>中張牌(明刻子)</option>
+                        <option>中張牌(暗刻子)</option>
+                        <option>中張牌(明槓子)</option>
+                        <option>中張牌(暗槓子)</option>
+                        <option>幺九牌(明刻子)</option>
+                        <option>幺九牌(暗刻子)</option>
+                        <option>幺九牌(明槓子)</option>
+                        <option>幺九牌(暗槓子)</option>
+                    </select></td>
+                <td><input type="text" name="field3" size="8" value="0"> 符</td>
+            </tr>
 
-        <tr>
-        <td>面子4</td>
-        <!--<td align="right">5,000円</td> -->
-        <td><select name="goods4" onChange="keisan()">
-        <option>明順子</option>
-        <option>暗順子</option>
-　      <option>中張牌(明刻子)</option>
-        <option>中張牌(暗刻子)</option>
-        <option>中張牌(明槓子)</option>
-        <option>中張牌(暗槓子)</option>
-        <option>幺九牌(明刻子)</option>
-        <option>幺九牌(暗刻子)</option>
-        <option>幺九牌(明槓子)</option>
-        <option>幺九牌(暗槓子)</option>
-        </select></td>
-        <td><input type="text" name="field4" size="8" value="0"> 符</td>
-        <tr></tr>
-        
-        <td><strong>面子の合計</strong></td>
-        <td><input type="text" name="field_total" size="8" value="0"> 符</td>
-        </tr>
-        <td><strong>基本符</strong></td>
-        <td><input type="text" name="basic" size="8" value="0"> 符</td>
+            <tr>
+                <td>面子4</td>
+                <!--<td align="right">5,000円</td> -->
+                <td><select name="goods4" onChange="keisan()">
+                        <option>明順子</option>
+                        <option>暗順子</option>
+                        　 <option>中張牌(明刻子)</option>
+                        <option>中張牌(暗刻子)</option>
+                        <option>中張牌(明槓子)</option>
+                        <option>中張牌(暗槓子)</option>
+                        <option>幺九牌(明刻子)</option>
+                        <option>幺九牌(暗刻子)</option>
+                        <option>幺九牌(明槓子)</option>
+                        <option>幺九牌(暗槓子)</option>
+                    </select></td>
+                <td><input type="text" name="field4" size="8" value="0"> 符</td>
+            <tr></tr>
+
+            <td><strong>面子の合計</strong></td>
+            <td><input type="text" name="field_total" size="8" value="0"> 符</td>
+            </tr>
+            <td><strong>基本符</strong></td>
+            <td><input type="text" name="basic" size="8" value="0"> 符</td>
         </table>
     </form>
 
 
     <form action="#" name="form2">
         <table>
-        <tr>
-        <th>雀頭</th>
-        <th>名称</th>
-        <th>符</th>
-        </tr>
-        <tr>
-        <td>雀頭</td>
-        <!-- <td align="right">500円</td> -->
-        <td><select name="head" onChange="keisan2()">
-        <option>数字牌</option>
-        <option>客風牌</option>
-        <option>風牌</option>
-        <option>自風牌</option>
-        <option>三元牌</option>
-        </select></td>
-        <td><input type="text" name="field5" size="8" value="0"> 符</td>
-        </tr>
-        </table>        
+            <tr>
+                <th>雀頭</th>
+                <th>名称</th>
+                <th>符</th>
+            </tr>
+            <tr>
+                <td>雀頭</td>
+                <!-- <td align="right">500円</td> -->
+                <td><select name="head" onChange="keisan2()">
+                        <option>数字牌</option>
+                        <option>客風牌</option>
+                        <option>風牌</option>
+                        <option>自風牌</option>
+                        <option>三元牌</option>
+                    </select></td>
+                <td><input type="text" name="field5" size="8" value="0"> 符</td>
+            </tr>
+        </table>
     </form>
 
 
     <form action="#" name="form3">
         <table>
-        <tr>
-        <th>待ち</th>
-        <th>名称</th>
-        <th>符</th>
-        </tr>
-        <tr>
-        <td>待ちの形</td>
-        <!-- <td align="right">500円</td> -->
-        <td><select name="machi" onChange="keisan3()">
-        <option>両面</option>
-        <option>シャンポン</option>
-        <option>単騎</option>
-        <option>カンチャン</option>
-        <option>ペンチャン</option>
-        </select></td>
-        <td><input type="text" name="field6" size="8" value="0"> 符</td>
-        </tr>
-        </table>        
+            <tr>
+                <th>待ち</th>
+                <th>名称</th>
+                <th>符</th>
+            </tr>
+            <tr>
+                <td>待ちの形</td>
+                <!-- <td align="right">500円</td> -->
+                <td><select name="machi" onChange="keisan3()">
+                        <option>両面</option>
+                        <option>シャンポン</option>
+                        <option>単騎</option>
+                        <option>カンチャン</option>
+                        <option>ペンチャン</option>
+                    </select></td>
+                <td><input type="text" name="field6" size="8" value="0"> 符</td>
+            </tr>
+        </table>
     </form>
 
 
     <form action="#" name="form4">
         <table>
-        <tr>
-        <th>ツモ符</th>
-        <th>名称</th>
-        <th>符</th>
-        </tr>
-        <tr>
-        <td>和了形</td>
-        <!-- <td align="right">500円</td> -->
-        <td><select name="agari" onChange="keisan4()">
-        <option>ロン</option>
-        <option>ツモ</option>
-        </select></td>
-        <td><input type="text" name="field7" size="8" value="0"> 符</td>
-        </tr>
-        </table>        
+            <tr>
+                <th>ツモ符</th>
+                <th>名称</th>
+                <th>符</th>
+            </tr>
+            <tr>
+                <td>和了形</td>
+                <!-- <td align="right">500円</td> -->
+                <td><select name="agari" onChange="keisan4()">
+                        <option>ロン</option>
+                        <option>ツモ</option>
+                    </select></td>
+                <td><input type="text" name="field7" size="8" value="0"> 符</td>
+            </tr>
+        </table>
     </form>
 
-    
+
     <form action="#" name="form5">
         <td><strong>最終的な符(切り上げ後)</strong></td>
         <td><select name="fu" onChange="fu_sum()">
-            <option>-</option>
-            <option>計算</option>
-            <option>七対子の場合</option>
-            <option>リセット</option>
-        </select></td>
+                <option>-</option>
+                <option>計算</option>
+                <option>計算(平和ツモ)</option>
+                <option>計算(七対子)</option>
+                <option>リセット</option>
+            </select></td>
 
         <td><input type="text" name="field8" size="8" value="0">符</td>
         <div id="output"></div>
@@ -399,33 +404,31 @@
     <form action="#" name="form6">
         <td><strong>飜数</strong></td>
         <td><select name="tensu" onChange="point()">
-            <option>-</option>
-            <option>1飜</option>
-            <option>2飜</option>
-            <option>3飜</option>
-            <option>4飜</option>
-            <option>5飜</option>
-            <option>6飜</option>
-            <option>7飜</option>
-            <option>8飜</option>
-            <option>9飜</option>
-            <option>10飜</option>
-            <option>11飜</option>
-            <option>12飜</option>
-            <option>13飜以上</option>
-            <option>リセット</option>
-        </select></td>
+                <option>-</option>
+                <option>1飜</option>
+                <option>2飜</option>
+                <option>3飜</option>
+                <option>4飜</option>
+                <option>5飜</option>
+                <option>6飜</option>
+                <option>7飜</option>
+                <option>8飜</option>
+                <option>9飜</option>
+                <option>10飜</option>
+                <option>11飜</option>
+                <option>12飜</option>
+                <option>13飜以上</option>
+                <option>リセット</option>
+            </select></td>
         最終的な点数(子)：
         <td><input type="text" name="field9" size="8" value="0"></td>
         <div id="output"></div>
     </form>
-  
 
-  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
-  <script src="calculator.js"></script>
-  <p>牌画像は<a href="https://mj-king.net/sozai/">麻雀王国様</a>の素材を使用させていただいております。</p>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
+    <script src="calculator.js"></script>
+    <!-- <p>牌画像は<a href="https://mj-king.net/sozai/">麻雀王国様</a>の素材を使用させていただいております。</p>-->
 </body>
 
 </html>
-
-  
